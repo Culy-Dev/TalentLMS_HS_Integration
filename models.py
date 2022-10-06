@@ -1,3 +1,7 @@
+"""
+Module to create a SQLite schema using SQLAlchemy to hold in student and course information.
+"""
+
 from sqlalchemy import create_engine, MetaData, ForeignKey, Column, Date, Integer, Text, PrimaryKeyConstraint, CheckConstraint 
 from sqlalchemy.orm import relationship, backref, sessionmaker, deferred
 from sqlalchemy.ext.declarative import declarative_base

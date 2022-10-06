@@ -1,3 +1,4 @@
+"""Module to transform TalentLMS data to what will be uploaded on Hubspot"""
 from calendar import timegm
 from dateutil.parser import parse
 from datetime import datetime,timezone

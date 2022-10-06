@@ -1,3 +1,5 @@
+"""Module to create set logging levels and handlers"""
+
 import logging
 from logging.handlers import SysLogHandler
 import sys

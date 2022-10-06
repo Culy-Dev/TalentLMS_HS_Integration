@@ -1,3 +1,4 @@
+"""Main module to run TalentLMS to Hubspot Integration"""
 from datetime import datetime
 
 from talentlmsapi import TalentLMS

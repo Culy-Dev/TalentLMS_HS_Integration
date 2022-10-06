@@ -1,6 +1,4 @@
-"""
-Contains functions that calls TalentLMS API.
-"""
+"""Contains functions that calls TalentLMS API to gather student and course information."""
 import os
 import json 
 import logging
