@@ -1,4 +1,5 @@
 """Main module to run TalentLMS to Hubspot Integration"""
+
 from datetime import datetime
 
 from talentlmsapi import TalentLMS
@@ -20,7 +21,7 @@ import os
 project_root = os.path.dirname(os.path.dirname(__file__))
 output_path = os.path.join(project_root, 'TLMS_HS_Integration/sql_queries')   
 
-class HourlyUpdate:
+class CurrUpdate:
 
     def __init__(self, isodatetime=datetime.utcnow().isoformat()):
         # Create an engine and session to SQLAlchemy to start the program
@@ -40,7 +41,7 @@ class HourlyUpdate:
             self.logger.error(e, exc_info=True)
             pass
         self.isodatetime = isodatetime # set the current time
-        self.logger = get_logger('HourlyUpdate') # Instantiate the logger
+        self.logger = get_logger('CurrUpdate') # Instantiate the logger
 
     def run(self):
         """Main function to run the program"""
@@ -222,5 +223,5 @@ class HourlyUpdate:
 
 
 if __name__ == '__main__':
-    integration = HourlyUpdate()
+    integration = CurrUpdate()
     integration.run()

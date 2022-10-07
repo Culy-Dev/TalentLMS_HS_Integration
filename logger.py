@@ -1,5 +1,4 @@
 """Module to create set logging levels and handlers"""
-
 import logging
 from logging.handlers import SysLogHandler
 import sys
@@ -68,8 +67,8 @@ def get_file_handler():
         file_handler (class): sends logging output to a disk file
     """
     isodatetime=datetime.utcnow().isoformat()
-    # Create log files with naming convention {isodate}_HourlyUpdate.log in log folder
-    log_fname = os.path.join(os.path.dirname(__file__) + '/log',F'{isodatetime}_HourlyUpdate.log')
+    # Create log files with naming convention {isodate}_CurrUpdate.log in log folder
+    log_fname = os.path.join(os.path.dirname(__file__) + '/log',F'{isodatetime}_CurrUpdate.log')
     file_handler = logging.FileHandler(log_fname, mode='a')
     # Set the lowest level to log at DEBUG
     file_handler.setLevel(logging.DEBUG)

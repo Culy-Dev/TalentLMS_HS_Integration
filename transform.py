@@ -1,4 +1,5 @@
 """Module to transform TalentLMS data to what will be uploaded on Hubspot"""
+
 from calendar import timegm
 from dateutil.parser import parse
 from datetime import datetime,timezone
@@ -13,7 +14,7 @@ import re
 # 2-8311841 is the internal ID of courses object on HS
 # 2-8311962 is the internal ID of the student_course_instance object on HS
 
-logger = logging.getLogger(f'HourlyUpdate.{__name__}')
+logger = logging.getLogger(f'CurrUpdate.{__name__}')
 
 def validate_unix(time_str):
     """

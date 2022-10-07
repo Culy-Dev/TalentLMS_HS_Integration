@@ -25,9 +25,9 @@ load_dotenv()
 TALENTLMS_API = os.getenv('TALENTLMS_API')
 
 
-logger = logging.getLogger(f'HourlyUpdate.{__name__}')
+logger = logging.getLogger(f'CurrUpdate.{__name__}')
 
-BASE_URL = 'https://company_name.talentlms.com'
+BASE_URL = 'https://client_name.talentlms.com'
 # Lets you fake a browser visit using a python requests or command wget
 headers = {
     'Authorization': f'{TALENTLMS_API}'
