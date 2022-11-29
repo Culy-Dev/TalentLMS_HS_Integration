@@ -68,7 +68,7 @@ def get_file_handler():
     """
     isodatetime=datetime.utcnow().isoformat()
     # Create log files with naming convention {isodate}_CurrUpdate.log in log folder
-    log_fname = os.path.join(os.path.dirname(__file__) + '/log',F'{isodatetime}_CurrUpdate.log')
+    log_fname = os.path.join(os.path.dirname(__file__) + os.sep, 'log',F'{isodatetime}_CurrUpdate.log')
     file_handler = logging.FileHandler(log_fname, mode='a')
     # Set the lowest level to log at DEBUG
     file_handler.setLevel(logging.DEBUG)
