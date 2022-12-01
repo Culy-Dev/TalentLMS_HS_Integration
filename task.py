@@ -65,7 +65,7 @@ class CurrUpdate:
 
         engine = create_engine(SQLITE_DB)
         session_factory = sessionmaker(bind = engine)
-        session = scoped_session(Session)
+        session = scoped_session(session_factory)
         return (engine, session)
         
         # GET ALL SESSIONS AND CLOSE DATABASE
