@@ -23,10 +23,8 @@ def validate_unix(time_str):
     :return: True if it's a valid unix time and False if not
     """
     if time_str.isdigit():
-        # Gets the current time in unix time milliseconds
-        curr_unix_time = timegm(datetime.utcnow().utctimetuple()) * 1000
         # Check if our time string is between 0 and the current unit time
-        if 0 <= int(time_str) <= curr_unix_time:
+        if 0 <= int(time_str):
             return True
     return False
 
