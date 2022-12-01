@@ -64,7 +64,7 @@ class CurrUpdate:
         """Creates a new database self.session for instant use"""
 
         engine = create_engine(SQLITE_DB)
-        Session = sessionmaker(bind = engine)
+        session_factory = sessionmaker(bind = engine)
         session = scoped_session(Session)
         return (engine, session)
         
