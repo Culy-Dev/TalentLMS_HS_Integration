@@ -65,7 +65,7 @@ def return_unix_time(time_str):
     :return: an empty string if there's no value, the same time string if it's already in unix time, or changing the time string to unix time
     """
     # If there's no value
-    if time_str is None or '':
+    if time_str is None or time_str == '':
         return None
     # If the value is already in unix time (millisec)
     elif validate_unix(time_str) is True:
